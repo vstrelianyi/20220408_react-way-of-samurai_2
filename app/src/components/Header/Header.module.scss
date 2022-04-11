@@ -1,0 +1,47 @@
+@import '../../styles/_vars';
+
+.Header{
+	background-color: #F7F4F3;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	:global{
+		//brand
+		a.brand{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 10px;
+			font-size: 22px;
+			font-weight: 700;
+			text-transform: uppercase;
+			img{
+				width: 60px;
+				object-fit: contain;
+				margin-right: 20px;
+			}
+			&:hover{
+				color:$green-dark;
+			}
+		}
+
+		//login
+		.login-block{
+			display: flex;
+			align-items: flex-end;
+			padding: 10px;
+			.button{
+				margin-left: 10px;
+				padding: 5px 10px;
+				background-color: $green-light;
+				transition: 0.5s background-color;
+				color: $white;
+				border: 1px solid $green-light;
+				&:hover{
+					background-color: $green-dark;
+					border: 1px solid $green-dark;
+				}
+			}
+		}
+	}
+}

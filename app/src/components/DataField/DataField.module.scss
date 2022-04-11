@@ -1,0 +1,21 @@
+@import '../../styles/_vars';
+
+.DataField{
+	display: flex;
+	@media( min-width: 576px){
+	}
+	@media( min-width: 768px){
+	}
+	@media( min-width: 992px){
+	}
+
+	
+	:global{
+		.label{
+			margin-right: 10px;
+		}
+		.value{
+			
+		}
+	}
+}

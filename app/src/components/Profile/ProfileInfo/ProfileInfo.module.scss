@@ -1,0 +1,21 @@
+@import '../../../styles/_vars';
+
+.ProfileInfo{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin-bottom: 20px;
+
+	@media( min-width: 576px){
+	}
+	@media( min-width: 768px){
+	}
+	@media( min-width: 992px){
+	}
+
+	:global{
+		.profile-image{
+			margin-bottom: 20px;
+		}
+	}
+}

@@ -1,0 +1,19 @@
+@import './_vars';
+
+.badge{
+	background-color: $grey2;
+	padding: 10px 15px;
+	border-radius: 5px;
+}
+
+.bordered{
+	border: 1px solid $grey2;
+	border-radius: 10px;
+}
+
+.mb-10{
+	margin-bottom: 10px;
+}
+.mb-20{
+	margin-bottom: 20px;
+}

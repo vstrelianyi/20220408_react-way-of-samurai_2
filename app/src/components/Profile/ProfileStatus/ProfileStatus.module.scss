@@ -1,0 +1,31 @@
+@import '../../../styles/_vars';
+
+.ProfileStatus{
+	display: flex;
+	flex-direction: column;
+	width: 300px;
+	border: 1px solid $grey2;
+
+	@media( min-width: 576px){
+	}
+	@media( min-width: 768px){
+	}
+	@media( min-width: 992px){
+	}
+
+	
+	:global{
+		span{
+			padding: 5px 10px;
+			height: 42px;
+			display: flex;
+			align-items: center;
+		}
+		input{
+			background-color: $white;
+			padding: 5px 10px;
+			font-size: 20px;
+			height: 42px;
+		}
+	}
+}

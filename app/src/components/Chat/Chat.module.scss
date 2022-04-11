@@ -1,0 +1,13 @@
+.Chat{
+	display: grid;
+	grid-template-columns: 2fr 10fr;
+	grid-template-rows: 1fr auto;
+	grid-template-areas:
+	"dialogs messages"
+	"input input";
+	grid-gap: 20px;
+	flex-basis: 100%;
+	overflow-y: auto;
+	:global{
+	}
+}

@@ -1,0 +1,40 @@
+@import '../../../styles/_vars';
+
+.Input{
+	display: flex;
+	flex-direction: column;
+	padding-bottom: 20px;
+	position: relative;
+	align-items: flex-start;
+
+	@media( min-width: 576px){
+	}
+	@media( min-width: 768px){
+	}
+	@media( min-width: 992px){
+	}
+
+	:global{
+		span{
+			user-select: none;
+		}
+		input{
+			background-color: $white;
+			padding: 5px 10px;
+			font-size: 20px;
+		}
+		.error{
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			font-size: 14px;
+			color: red;
+		}
+	}
+}
+
+.hasError{
+	input{
+		border-color: red;
+	}
+}

@@ -1,0 +1,46 @@
+@import '../../../styles/_vars';
+
+.FormControl{
+	display: flex;
+	flex-direction: column;
+	padding-bottom: 20px;
+	position: relative;
+	align-items: flex-start;
+
+	@media( min-width: 576px){
+	}
+	@media( min-width: 768px){
+	}
+	@media( min-width: 992px){
+	}
+
+	:global{
+		span.label{
+			user-select: none;
+		}
+		textarea{
+			background-color: $white;
+			padding: 5px 10px;
+			font-size: 20px;
+		}
+		input{
+			background-color: $white;
+			padding: 5px 10px;
+			font-size: 20px;
+			width: 100%;
+		}
+		.error{
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			font-size: 14px;
+			color: red;
+		}
+	}
+}
+
+.hasError{
+	input{
+		border-color: red;
+	}
+}

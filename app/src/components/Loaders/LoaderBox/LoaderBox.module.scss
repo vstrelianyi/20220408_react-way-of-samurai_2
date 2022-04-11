@@ -1,0 +1,41 @@
+@import '../../../styles/_vars';
+
+.LoaderBox{
+	$sequence: 16, 11, 15, 12, 6, 1, 2, 5, 7, 4, 3, 8, 10, 13, 14, 9;
+	$speed: 0.15;
+	$duration: $speed * length($sequence) * 2;
+
+	width: 100px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr;
+	outline: 2px solid white;
+	
+	@for $index from 1 through length($sequence) {
+		$currentItem: nth($sequence, $index);
+		.cell:nth-child(#{$currentItem}) {
+			animation-delay: #{($index * $speed) + ($speed / 4)}s;
+		}
+	}
+	:global{
+		.cell {
+			outline: 1px solid white;
+			padding-top: 100%;
+			animation-name: fill;
+			animation-duration: #{$duration}s;
+			animation-fill-mode: both;
+			animation-iteration-count: infinite;
+		}
+
+	}
+
+	@keyframes fill {
+		0%, 50% {
+			background-color: transparent;
+		}
+		1%, 49% {
+			 background-color: white;
+		}
+	}
+
+}

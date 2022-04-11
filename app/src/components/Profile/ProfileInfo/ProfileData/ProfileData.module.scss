@@ -1,0 +1,28 @@
+@import '../../../../styles/_vars';
+
+.ProfileData{
+	@media( min-width: 576px){
+	}
+	@media( min-width: 768px){
+	}
+	@media( min-width: 992px){
+	}
+
+	
+	:global{
+		picture{
+			img{
+				width: 100px;
+			}
+		}
+		.data-field:not(:last-of-type){
+			margin-bottom: 20px;
+		}
+		.data-field{
+			.value{
+				width: 350px;
+				white-space: normal;
+			}
+		}
+	}
+}

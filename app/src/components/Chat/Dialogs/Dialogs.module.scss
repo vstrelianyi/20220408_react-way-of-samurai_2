@@ -1,0 +1,22 @@
+@import '../../../styles/_vars';
+
+.Dialogs{
+	grid-area: dialogs;
+
+	@media( min-width: 576px){
+	}
+	@media( min-width: 768px){
+	}
+	@media( min-width: 992px){
+	}
+
+	:global{
+		.dialog-item{
+			background-color: rgba( 0, 0,0, 0.4);
+			padding: 5px 10px;
+			margin: 5px 0;
+			color: $white;
+			cursor: pointer;
+		}
+	}
+}

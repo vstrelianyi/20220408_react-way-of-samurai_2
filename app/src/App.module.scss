@@ -1,0 +1,28 @@
+.App {
+	height: 100vh;
+  display: grid;
+	grid-template-rows: auto 1fr;
+	grid-template-columns: 2fr 10fr;
+	grid-gap: 0px;
+	grid-template-areas: 
+		"header header"
+		"nav main";
+
+	:global{
+		.header{
+			grid-area: header;
+		}
+		.nav{
+			grid-area: nav;
+		}
+		main.main{
+			grid-area: main;
+			display: flex;
+			overflow: auto;
+			background-image: url( 'https://images.unsplash.com/photo-1594568284297-7c64464062b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80');
+			padding: 20px;
+			flex-direction: column;
+		}
+	}
+}
+

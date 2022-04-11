@@ -1,0 +1,70 @@
+@import '../../../styles/_vars.scss';
+
+
+.LoaderSpinner{
+	$color: $green-dark;
+	$width: 60px;
+	$height: 60px;
+
+	display: flex;
+	position: relative;
+	width: $width;
+	height: $height;
+
+	@media( min-width: 576px){
+	}
+	@media( min-width: 768px){
+	}
+	@media( min-width: 992px){
+	}
+
+	:global{
+		div {
+			position: absolute;
+			display: inline-block;
+			top: 0px;
+			left: 0px;
+			width: $width;
+			height: $height;
+			border: 4px solid $color;
+			border-radius: 50%;
+			border-color: $color transparent transparent transparent;
+			&:nth-child(1) {
+				animation-delay: -0.45s;
+			}
+			&:nth-child(2) {
+				animation-delay: -0.3s;
+			}
+			&:nth-child(3) {
+				animation-delay: -0.15s;
+			}
+			:local{
+				animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+			}
+		}
+	}
+	@keyframes lds-ring {
+		0% {
+			transform: rotate(0deg);
+		}
+		100% {
+			transform: rotate(360deg);
+		}
+	}
+}
+
+.sizeBig{
+	$width: 100px;
+	$height: 100px;
+
+	width: $width;
+	height: $height;
+
+	:global{
+		div {
+			width: $width;
+			height: $height;
+			border-width: 8px;
+		}
+	}
+}
