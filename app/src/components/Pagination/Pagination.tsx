@@ -1,6 +1,6 @@
 import classNames from 'classnames/bind';
 import styles from './Pagination.module.scss';
-import React, { useState, FC } from 'react';
+import { useState, FC } from 'react';
 
 type PropsType = {
 	itemsCount: number
