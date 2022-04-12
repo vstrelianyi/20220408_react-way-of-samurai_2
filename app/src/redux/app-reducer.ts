@@ -1,7 +1,7 @@
 // DAL
 import {
   getAuthMeThunkCreator
-} from './auth-reducer.ts';
+} from './auth-reducer';
 
 export type InitialStateType = {
 	isInitialized: boolean,

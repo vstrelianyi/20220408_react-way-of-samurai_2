@@ -9,7 +9,21 @@ import LoaderSpinner from 'components/Loaders/LoaderSpinner/LoaderSpinner';
 // import Button from 'components/Button/Button';
 import UsersList from 'components/Users/UsersList/UsersList';
 
-const Users = ( props ) => {
+// TYPES
+import { UserType } from 'types/types';
+import { FC } from 'react';
+
+type PropsType = {
+	pagesCount: number
+	currentPage: number
+	onPageChanged: ( pageNumber: number ) => void
+	isLoading: boolean
+	users: Array<UserType>
+	isButtonsDisabled: boolean
+	toggleIsFollowed: boolean
+}
+
+const Users: FC<PropsType> = ( props ) => {
   const {
     pagesCount,
     currentPage,

@@ -3,6 +3,7 @@ type PostType = {
 	message: string
 	likesCount: number
 }
+
 type ContactsType = {
 	github: string
 	vk: string
@@ -13,10 +14,12 @@ type ContactsType = {
 	youtube: string
 	mainlink: string
 }
+
 type PhotosType = {
 	small: string | null
 	large: string | null
 }
+
 type ProfileType = {
 	userId: number
 	lookingForAJob: boolean
@@ -26,9 +29,18 @@ type ProfileType = {
 	photos: PhotosType
 }
 
+type UserType = {
+	id: number
+	name: string
+	status: string
+	photos: PhotosType
+}
+
 export {
   PostType,
   ContactsType,
   PhotosType,
-  ProfileType
+  ProfileType,
+
+  UserType
 };

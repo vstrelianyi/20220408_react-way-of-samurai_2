@@ -1,8 +1,14 @@
 import classNames from 'classnames/bind';
 import styles from './Pagination.module.scss';
-import { useState } from 'react';
+import React, { useState, FC } from 'react';
 
-const Pagination = ( props ) => {
+type PropsType = {
+	itemsCount: number
+	currentPage: number
+	onPageChanged: ( pageNumber: number ) => void
+}
+
+const Pagination: FC<PropsType> = ( props ) => {
   const { itemsCount, currentPage, onPageChanged, } = props;
 
   const classes = classNames( [
@@ -17,7 +23,7 @@ const Pagination = ( props ) => {
   const rightBoundary = batchIndex * batchSize;
 
   const getPaginationHTML = count => {
-    let html = [];
+    const html = [];
     for ( let i = 1; i <= count; i++ ){
       if ( i >= leftBoundary && i <= rightBoundary ){
         html.push( <PaginationItem key={ i } i={ i } currentPage={ currentPage } onPageChanged={ onPageChanged }/> );
